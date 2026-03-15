@@ -43,6 +43,42 @@ body {
   overflow: hidden;
 }
 
+.page-title {
+  position: absolute;
+  top: 60px;
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan-strong);
+  transform-origin: center;
+  transition: text-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.page-title:hover {
+  animation: wiggle 0.8s ease-in-out infinite;
+  text-shadow: none;
+  filter: none;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-0.5deg) translateX(-1px);
+  }
+  50% {
+    transform: rotate(0.5deg) translateX(1px);
+  }
+  75% {
+    transform: rotate(-0.35deg) translateX(-0.5px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+}
+
 .ambient {
   position: absolute;
   border-radius: 999px;
@@ -84,6 +120,13 @@ body {
   backdrop-filter: blur(24px);
   box-shadow: 0 24px 120px rgba(5, 10, 20, 0.5);
   padding: 30px;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.signup-card:hover {
+  transform: translateY(-3px) rotate(-0.25deg);
+  border-color: rgba(186, 230, 253, 0.28);
+  box-shadow: 0 30px 130px rgba(5, 10, 20, 0.56);
 }
 
 .card-header {
@@ -175,6 +218,11 @@ button {
 
 button:hover {
   background: #f8fdff;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 .form-message {
