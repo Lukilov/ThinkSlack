@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Terminal - Coming Soon</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="ambient ambient-a" aria-hidden="true"></div>
+      <div class="ambient ambient-b" aria-hidden="true"></div>
+      <div class="ambient ambient-c" aria-hidden="true"></div>
+
+      <section class="signup-card" aria-labelledby="waitlist-title">
+        <header class="card-header">
+          <p class="eyebrow">AI TERMINAL</p>
+          <span class="status-pill">Coming soon</span>
+        </header>
+
+        <h1 id="waitlist-title">Join the early access waitlist</h1>
+        <p class="subtitle">
+          Be among the first to know when the app launches.
+        </p>
+        <form id="waitlist-form" novalidate>
+          <label for="email">Email</label>
+          <div class="input-row">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+              autocomplete="email"
+              required
+            />
+            <button type="submit">Notify me</button>
+          </div>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
